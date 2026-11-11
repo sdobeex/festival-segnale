@@ -209,16 +209,160 @@ h3 {
   top: 1rem;
 }
 
+/* Pagina Info e luoghi: galleria Swiper. */
+.galleria {
+  max-width: 54rem;
+}
+
+.galleria-luoghi {
+  overflow: hidden;
+  border: 1px solid #b7c0b7;
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.galleria-slide {
+  margin: 0;
+}
+
+.galleria-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.galleria-slide figcaption {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.galleria-slide figcaption strong {
+  display: block;
+  font-family: var(--font-titoli);
+  font-size: 1.25rem;
+}
+
+.galleria-comandi {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.galleria-pulsante {
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--colore-primario);
+  color: #ffffff;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.galleria-pulsante:hover {
+  background: var(--colore-primario-scuro);
+}
+
+.galleria-pulsante:focus-visible {
+  outline: 3px solid var(--colore-testo);
+  outline-offset: 3px;
+}
+
+/* Swiper disattiva il pulsante alla prima e all'ultima foto. */
+.galleria-pulsante:disabled,
+.galleria-pulsante.swiper-button-disabled {
+  background: #d8d2c5;
+  color: #46564b;
+  cursor: not-allowed;
+}
+
+/* Swiper dà al contatore width: 100%; qui torna alla sua misura. */
+.galleria-contatore {
+  width: auto;
+  margin: 0;
+  color: #46564b;
+  font-weight: bold;
+}
+
+.crediti {
+  color: #46564b;
+  font-size: 0.875rem;
+}
+
+/* Pagina Info e luoghi: mappa e indirizzi. */
+#mappa-sedi {
+  display: block;
+  width: 100%;
+  height: 22rem;
+  border: 1px solid #b7c0b7;
+  border-radius: 0.75rem;
+}
+
+.mappa-link {
+  margin-top: 0.75rem;
+}
+
+.sedi-titolo {
+  margin-top: 2rem;
+}
+
+.sedi {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sede {
+  padding: 1.25rem;
+  border: 1px solid #b7c0b7;
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.sede h4 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-titoli);
+  font-size: 1.125rem;
+}
+
+.sede p {
+  margin: 0 0 0.25rem;
+}
+
+.sede-festival {
+  color: #46564b;
+  font-size: 0.875rem;
+}
+
+.sede a {
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+
 /* Da 600 px in su: due colonne. */
 @media (min-width: 600px) {
   .event-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  #mappa-sedi {
+    height: 28rem;
   }
 }
 
 /* Da 1024 px in su: tre colonne. */
 @media (min-width: 1024px) {
   .event-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sedi {
     grid-template-columns: repeat(3, 1fr);
   }
 }
