@@ -1,53 +1,34 @@
-# Segnale — Guida iniziale
+# Segnale — Base completa: Home e Programma
 
-Realizzerai le prime due pagine di un festival immaginario. La base contiene testi, immagini, due schede evento e uno stile iniziale. Alcuni collegamenti sono ancora da completare e le schede non hanno ancora una disposizione a griglia.
+Questa versione realizza i requisiti della precedente consegna su Segnale: due pagine collegate, sei eventi, un CSS condiviso e griglia responsive. È un esempio da cui ripartire per il lavoro successivo.
 
-## 1. Apri il sito
+## Se hai già completato il tuo sito
 
-1. Estrai completamente lo ZIP in una cartella sul tuo computer. Non lavorare dentro l'archivio compresso.
-2. In VS Code usa **File → Apri cartella / Open Folder** e scegli la cartella che contiene direttamente `index.html`, `programma.html` e `style.css`. Non una cartella esterna che contiene a sua volta `festival-segnale`, né la sottocartella `istruzioni`.
-3. Se compare Restricted Mode, autorizza la cartella dopo aver controllato che sia il materiale del corso: **Manage → Workspace Trust → Trust**. Le diciture possono variare con la lingua di VS Code.
-4. Apri `index.html` e avvia Live Preview di Microsoft. Puoi anche aprire direttamente l'HTML nel browser: in questa attività non usiamo JavaScript o richieste a dati esterni.
-5. Per vedere subito il Programma, apri `programma.html`: i collegamenti da completare non portano ancora all'altra pagina.
+Puoi continuare dal tuo progetto, conservando colori, caratteri e spaziature. Confronta i requisiti e correggi eventuali problemi; non è necessario rendere il tuo sito identico a questo esempio. Prima di modificarlo, conserva una versione funzionante con Git oppure una copia della cartella.
 
-```text
-festival-segnale/
-├── index.html
-├── programma.html
-├── style.css
-├── assets/
-└── istruzioni/
-    ├── GUIDA-INIZIALE.md
-    ├── CONSEGNA.md
-    ├── CONTENUTI-EVENTI.md
-    └── PROMPT-DEMO.md
-```
+## Se usi questa base
 
-## 2. Obiettivo della demo
+1. Estrai lo ZIP e apri la cartella `festival-segnale` in VS Code.
+2. Apri `index.html` con Live Preview oppure direttamente nel browser. Home e Programma funzionano anche senza un server locale.
+3. Per intervenire sul sito usa `index.html`, `programma.html` e `style.css`. Le illustrazioni sono in `assets/`.
+4. Se aggiorni una repository esistente, conserva la cartella `.git` e la tua cronologia; non cancellare la repository per caricare questa base. Nella radice della repository devono esserci direttamente i file HTML, `style.css` e `assets/`.
+5. Dopo il caricamento o il push, controlla anche il sito pubblico: aprire la copia locale non pubblica i file su GitHub Pages.
 
-Collegare le pagine, osservare il CSS condiviso e disporre le due schede con Grid: una colonna sotto 600 px e due da 600 px in su. Nel richiamo iniziale osserveremo anche colori, font e variabili CSS già predisposte. Non viene distribuita la soluzione della demo. I prompt sono esempi: controlla sempre la risposta prima di applicarla.
+## Cosa contiene
 
-### Dove sono definite le scelte comuni
+- Home con menu e collegamento «Esplora il programma» funzionanti.
+- Programma con tutti e sei gli eventi e le relative illustrazioni e informazioni.
+- Un solo CSS condiviso: una colonna sotto 600 px, due da 600 px, tre da 1024 px.
+- Colore principale blu e variante più scura per l’hover; bordo dell’intestazione collegato alla stessa variabile.
+- Spazio fra schede di `2rem` e spazio interno alle schede di `1.5rem`.
+- Caratteri della base conservati: sans-serif per il testo e serif per i titoli.
 
-All'inizio di `style.css`, il blocco `:root` contiene sei variabili CSS:
+Sono possibili altre scelte corrette di colore, caratteri e spaziature. Non occorrono librerie, framework, JavaScript, npm o nuovi account per aprire questo sito.
 
-| Variabile | Uso |
-| --- | --- |
-| `--colore-primario` | Collegamenti e sfondo del pulsante; nella demo la useremo anche per il bordo dell'intestazione. |
-| `--colore-primario-scuro` | Sfondo del pulsante quando ci passi sopra con il mouse, cioè nello stato hover. |
-| `--colore-sfondo` | Sfondo generale della pagina. |
-| `--colore-testo` | Colore di base del testo, del marchio e degli indicatori di focus. |
-| `--font-testo` | Elenco dei caratteri per il testo. |
-| `--font-titoli` | Elenco dei caratteri per i titoli. |
+Festival, luoghi ed eventi sono immaginari. Le illustrazioni sono fornite per il progetto didattico e non occorre cercare immagini esterne.
 
-Le regole richiamano quei valori con `var()`, per esempio `color: var(--colore-primario);`. Cambiare una variabile aggiorna soltanto le regole che la utilizzano; le altre scelte e i colori delle illustrazioni SVG non cambiano automaticamente. Il colore hover è separato: non viene calcolato a partire dal principale.
+## Nuova consegna: Info e luoghi
 
-## 3. Quale documento leggere
+Leggi [requisiti-nuova-consegna.md](requisiti-nuova-consegna.md): descrive cosa realizzare, i controlli da fare e come proseguire nella stessa repository. Contiene anche l’iframe pubblico della mappa e i riferimenti di Swiper. Le tre fotografie sono in `assets/luoghi/`.
 
-I quattro documenti Markdown sono nella sottocartella `istruzioni/`. HTML, CSS e immagini restano nella cartella del sito; apri quella cartella completa in VS Code.
-
-- [CONSEGNA.md](CONSEGNA.md): requisiti dell'esercizio, pubblicazione e promemoria sul lavoro con l'AI.
-- [CONTENUTI-EVENTI.md](CONTENUTI-EVENTI.md): dati, testi e immagini degli eventi da aggiungere.
-- [PROMPT-DEMO.md](PROMPT-DEMO.md): richieste usate nella demo, da consultare e adattare al codice corrente.
-
-Questa guida iniziale serve per aprire il progetto e orientarti nella base. Per il lavoro delle due settimane fai riferimento a CONSEGNA.md.
+Le pagine della nuova consegna e il relativo codice sono da realizzare: questo ZIP include la soluzione precedente e i materiali di partenza per il nuovo lavoro.
